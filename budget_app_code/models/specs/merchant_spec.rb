@@ -5,7 +5,7 @@ require( 'pry-byebug' )
 
 class MerchantTest < Minitest::Test
 
-binding.pry
+
 
   def setup
     options = {
@@ -24,9 +24,14 @@ binding.pry
     assert_equal("Sainsburys", Merchant.find(1).merchant_name)
   end
 
+  def test_self_all
+    assert_equal("Sainsburys", Merchant.all().first.merchant_name)
+  end
+
 
 
 
 end
 
+binding.pry
 nil

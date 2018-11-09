@@ -31,4 +31,15 @@ class Merchant
     return merchant
   end
 
+  def self.all()
+    sql = "SELECT * FROM merchants"
+    merchant_data = SqlRunner.run(sql)
+    merchants = map_items(merchant_data)
+    return merchants
+  end
+
+  def self.map_items(merchant_data)
+    return merchant_data { |merchant| Merchant.new(merchant) }
+  end
+
 end
