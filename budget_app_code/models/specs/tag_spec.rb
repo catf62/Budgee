@@ -19,6 +19,12 @@ class TagTest < Minitest::Test
   def test_tag_has_name
     assert_equal("Groceries", @tag1.tag_name)
   end
+
 #  test for save
   # run seeds.rb and see if seeds appear in tags table
+
+  def test_find_by_id
+    assert_equal("Groceries", Tag.find(1).tag_name)
+  end
+
 end
