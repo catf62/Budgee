@@ -28,15 +28,22 @@ class MerchantTest < Minitest::Test
   #   assert_equal("Tesco", Merchant.all().first.merchant_name)
   # end
 
-  def test_update
-    @merchant1.merchant_name = "Tesco"
-    @merchant1.update
-    assert_equal("Tesco", @merchant1.merchant_name)
+  # def test_update
+  #   @merchant1.merchant_name = "Tesco"
+  #   @merchant1.update
+  #   assert_equal("Tesco", @merchant1.merchant_name)
+  # end
+
+binding.pry
+
+  def test_delete_all
+    assert_equal (nil, Merchants.delete_all)
   end
-
-
+  # def test_delete
+  #   assert_equal(nil, @merchant1.delete)
+  # end
 
 end
 
-binding.pry
+
 nil
