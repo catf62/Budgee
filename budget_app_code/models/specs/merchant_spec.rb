@@ -9,7 +9,7 @@ class MerchantTest < Minitest::Test
 
   def setup
     options = {
-      'id' => 1,
+      'id' => 13,
       'merchant_name' => 'Sainsburys'
     }
 
@@ -40,7 +40,7 @@ class MerchantTest < Minitest::Test
   #   p Merchant.delete_all
   # end
   # def test_delete
-  #   assert_equal(nil, @merchant1.delete)
+  #   @merchant1.delete
   # end
 
 end

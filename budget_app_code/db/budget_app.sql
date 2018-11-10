@@ -27,3 +27,13 @@ CREATE TABLE transactions
   total_spend NUMERIC(10,2),
   remaining_budget NUMERIC(10,2)
 );
+
+-- To wipe and start again
+
+  -- Close Postico first, then enter the following in the terminal
+
+    -- DROPDB budget_app
+    -- CREATEDB budget_app
+    -- psql -d budget_app -f ../../db/budget_app.sql
+
+-- note: the path to this file will change depending on where I am in the file tree
