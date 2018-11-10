@@ -1,6 +1,9 @@
+DROP TABLE budget_transactions;
+DROP TABLE transactions;
 DROP TABLE merchants;
 DROP TABLE tags;
-DROP TABLE transactions;
+DROP TABLE budgets;
+
 
 CREATE TABLE merchants
 (
@@ -21,9 +24,7 @@ CREATE TABLE transactions
   merchant_id INT8 references merchants(id) ON DELETE CASCADE,
   tag_id INT8 references tags(id) ON DELETE CASCADE,
   essential VARCHAR(255),
-  time_added NUMERIC(4,2),
-  day_added VARCHAR(255),
-  month_added VARCHAR(255),
+  time_added TIMESTAMP,
   total_spend NUMERIC(10,2),
   remaining_budget NUMERIC(10,2)
 );
@@ -31,19 +32,18 @@ CREATE TABLE transactions
 CREATE TABLE budgets
 (
   id SERIAL8 primary key,
-  budget_name VARCHAR(255)
+  budget_name VARCHAR(255),
   budget_amount NUMERIC(10,2),
-  start_time DATETIME,
-  end_time DATETIME
+  start_time TIMESTAMP,
+  end_time TIMESTAMP
 );
 
 CREATE TABLE budget_transactions
 (
   id SERIAL8 primary key,
-  transaction_id INT8 references transcations(id) ON DELETE CASCADE,
+  transaction_id INT8 references transactions(id) ON DELETE CASCADE,
   budget_id INT8 references budgets(id) ON DELETE CASCADE
-
-)
+);
 
 -- To wipe and start again
 
