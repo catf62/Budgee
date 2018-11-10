@@ -37,7 +37,8 @@ class MerchantTest < Minitest::Test
 binding.pry
 
   def test_delete_all
-    assert_equal (nil, Merchants.delete_all)
+    Merchant.delete_all
+    assert_equal (0,  Merchant.all.length)
   end
   # def test_delete
   #   assert_equal(nil, @merchant1.delete)
