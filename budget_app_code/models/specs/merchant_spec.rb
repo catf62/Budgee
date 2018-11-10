@@ -34,17 +34,16 @@ class MerchantTest < Minitest::Test
   #   assert_equal("Tesco", @merchant1.merchant_name)
   # end
 
-binding.pry
 
-  def test_delete_all
-    Merchant.delete_all
-    assert_equal (0,  Merchant.all.length)
-  end
+
+  # def test_delete_all
+  #   p Merchant.delete_all
+  # end
   # def test_delete
   #   assert_equal(nil, @merchant1.delete)
   # end
 
 end
 
-
+binding.pry
 nil
