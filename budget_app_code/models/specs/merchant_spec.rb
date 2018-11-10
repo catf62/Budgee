@@ -16,18 +16,23 @@ class MerchantTest < Minitest::Test
     @merchant1 = Merchant.new(options)
   end
 
-  def test_merchant_has_name
-    assert_equal("Sainsburys", @merchant1.merchant_name)
-  end
+  # def test_merchant_has_name
+  #   assert_equal("Sainsburys", @merchant1.merchant_name)
+  # end
+  #
+  # def test_find_by_id
+  #   assert_equal("Tesco", Merchant.find(1).merchant_name)
+  # end
+  #
+  # def test_self_all
+  #   assert_equal("Tesco", Merchant.all().first.merchant_name)
+  # end
 
-  def test_find_by_id
-    assert_equal("Sainsburys", Merchant.find(1).merchant_name)
+  def test_update
+    @merchant1.merchant_name = "Tesco"
+    @merchant1.update
+    assert_equal("Tesco", @merchant1.merchant_name)
   end
-
-  def test_self_all
-    assert_equal("Sainsburys", Merchant.all().first.merchant_name)
-  end
-
 
 
 

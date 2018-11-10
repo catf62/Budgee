@@ -1,7 +1,8 @@
 require_relative( '../db/sql_runner' )
 
 class Merchant
-  attr_reader :id, :merchant_name
+  attr_reader :id
+  attr_accessor :merchant_name
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
@@ -39,7 +40,15 @@ class Merchant
   end
 
   def self.map_items(merchant_data)
-    return merchant_data { |merchant| Merchant.new(merchant) }
+    return merchant_data.map { |merchant| Merchant.new(merchant) }
+  end
+
+  def update()
+    sql = "UPDATE Merchants
+    SET merchant_name = $1
+    WHERE id = $2"
+    values = [@merchant_name, @id]
+    SqlRunner.run(sql, values)
   end
 
 end
