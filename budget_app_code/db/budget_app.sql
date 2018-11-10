@@ -28,6 +28,23 @@ CREATE TABLE transactions
   remaining_budget NUMERIC(10,2)
 );
 
+CREATE TABLE budgets
+(
+  id SERIAL8 primary key,
+  budget_name VARCHAR(255)
+  budget_amount NUMERIC(10,2),
+  start_time DATETIME,
+  end_time DATETIME
+);
+
+CREATE TABLE budget_transactions
+(
+  id SERIAL8 primary key,
+  transaction_id INT8 references transcations(id) ON DELETE CASCADE,
+  budget_id INT8 references budgets(id) ON DELETE CASCADE
+
+)
+
 -- To wipe and start again
 
   -- Close Postico first, then enter the following in the terminal
