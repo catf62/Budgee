@@ -27,4 +27,8 @@ class TagTest < Minitest::Test
     assert_equal("Groceries", Tag.find(1).tag_name)
   end
 
+  def test_self_all
+    assert_equal("Travel", Tag.all().last.tag_name)
+  end
+
 end
