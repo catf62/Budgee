@@ -50,4 +50,13 @@ class Budget
     return budget_data.map { |budget| Budget.new(budget) }
   end
 
+  def update()
+    p @budget2
+    sql = "UPDATE budgets
+    SET budget_name = $1, budget_amount = $2, start_time = $3, end_time = $4
+    WHERE id = $5"
+    values = [budget_name, budget_amount, start_time, end_time, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end

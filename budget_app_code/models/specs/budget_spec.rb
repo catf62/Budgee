@@ -11,7 +11,7 @@ class BudgetTest < Minitest::Test
       'budget_name' => 'May 2018',
       'budget_amount' => '500.00',
       'start_time' => '2018-01-05 04:05:06',
-      'end_time' => '2018-30-05 11:59:59'
+      'end_time' => '2018-05-30 11:59:59'
     }
 
     @budget1 = Budget.new(options)
@@ -29,8 +29,17 @@ class BudgetTest < Minitest::Test
   #   assert_equal("May 2018", Budget.find(1).budget_name)
   # end
 
-    def test_self_all
-      assert_equal("Groceries Budget August 2018", Budget.all().last.budget_name)
+    # def test_self_all
+    #   assert_equal("Groceries Budget August 2018", Budget.all().last.budget_name)
+    # end
+
+    def test_update
+      @budget1.budget_name = "Christmas"
+      @budget1.update
+      assert_equal("Christmas", @budget1.budget_name)
     end
 
 end
+
+# binding.pry
+# nil
