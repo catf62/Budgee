@@ -42,8 +42,8 @@ class TagTest < Minitest::Test
   end
 
 
-  # def test_delete_all
-  #   p Merchant.delete_all
-  # end
+  def test_delete_all
+    Tag.delete_all
+  end
 
 end
