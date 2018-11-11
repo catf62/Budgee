@@ -39,4 +39,15 @@ class Budget
     return budget
   end
 
+  def self.all()
+    sql = "SELECT * FROM budgets"
+    budget_data = SqlRunner.run(sql)
+    budgets = map_items(budget_data)
+    return budgets
+  end
+
+  def self.map_items(budget_data)
+    return budget_data.map { |budget| Budget.new(budget) }
+  end
+
 end

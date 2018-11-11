@@ -25,8 +25,12 @@ class BudgetTest < Minitest::Test
     # #  test for save
     #   # run seeds.rb and see if seeds appear in tags table
 
-  def test_find_by_id
-    assert_equal("May 2018", Budget.find(1).budget_name)
-  end
+  # def test_find_by_id
+  #   assert_equal("May 2018", Budget.find(1).budget_name)
+  # end
+
+    def test_self_all
+      assert_equal("Groceries Budget August 2018", Budget.all().last.budget_name)
+    end
 
 end
