@@ -31,10 +31,19 @@ class TagTest < Minitest::Test
 #     assert_equal("Travel", Tag.all().last.tag_name)
 #   end
 
-  def test_update
-    @tag1.tag_name = "Books"
-    @tag1.update
-    assert_equal("Books", @tag1.tag_name)
+  # def test_update
+  #   @tag1.tag_name = "Books"
+  #   @tag1.update
+  #   assert_equal("Books", @tag1.tag_name)
+  # end
+
+  def test_delete
+    @tag1.delete
   end
+
+
+  # def test_delete_all
+  #   p Merchant.delete_all
+  # end
 
 end
