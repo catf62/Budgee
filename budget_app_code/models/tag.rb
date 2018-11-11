@@ -44,6 +44,14 @@ class Tag
     return tag_data.map { |tag| Tag.new(tag) }
   end
 
+  def update()
+    sql = "UPDATE tags
+    SET tag_name = $1
+    WHERE id = $2"
+    values = [tag_name, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end
 
 # binding.pry
