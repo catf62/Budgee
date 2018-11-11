@@ -30,4 +30,13 @@ class Budget
     @id = id
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM budgets
+    WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql ,values).first
+    budget = Budget.new(result)
+    return budget
+  end
+
 end
