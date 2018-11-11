@@ -3,7 +3,7 @@ require( 'pry-byebug' )
 
 class Budget
   attr_reader :id
-  attr_accessor :budget_name, :start_time, :end_time
+  attr_accessor :budget_name, :budget_amount, :start_time, :end_time
 
   def initialize ( options )
     @id = options['id'].to_i if options['id']
@@ -17,13 +17,14 @@ class Budget
     sql="INSERT INTO budgets
     (
       budget_name,
+      budget_amount,
       start_time,
       end_time
     )
       VALUES
-      ($1, $2, $3)
+      ($1, $2, $3, $4)
       RETURNING id"
-    values = [@budget_name, @start_time, @end_time]
+    values = [@budget_name, @budget_amount, @start_time, @end_time]
     result = SqlRunner.run(sql, values)
     id = result.first['id']
     @id = id

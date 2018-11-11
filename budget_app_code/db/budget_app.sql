@@ -33,7 +33,7 @@ CREATE TABLE budgets
 (
   id SERIAL8 primary key,
   budget_name VARCHAR(255),
-  budget_amount NUMERIC(10,2),
+  budget_amount NUMERIC,
   start_time TIMESTAMP,
   end_time TIMESTAMP
 );

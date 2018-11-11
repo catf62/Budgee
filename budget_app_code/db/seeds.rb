@@ -24,13 +24,13 @@ tag4.save
 
 budget1 = Budget.new({
   'budget_name' => 'May 2018',
-  'budget_amount' => '500.00',
+  'budget_amount' => 500.00,
   'start_time' => '2018-05-01 04:05:06',
   'end_time' => '2018-05-30 11:59:59'
   })
 budget2 = Budget.new({
   'budget_name' => 'June 2018',
-  'budget_amount' => '500.00',
+  'budget_amount' => 500.00,
   'start_time' => '2018-06-01 10:05:06',
   'end_time' => '2018-06-25 11:59:59'
   })

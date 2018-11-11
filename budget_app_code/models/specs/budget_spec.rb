@@ -9,7 +9,7 @@ class BudgetTest < Minitest::Test
     options = {
       'id' => 1,
       'budget_name' => 'May 2018',
-      'budget_amount' => 500,
+      'budget_amount' => '500.00',
       'start_time' => '2018-01-05 04:05:06'
       'end_time' => '2018-30-05 11:59:59'
     }
