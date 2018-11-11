@@ -9,8 +9,9 @@ class BudgetTest < Minitest::Test
     options = {
       'id' => 1,
       'budget_name' => 'May 2018',
-      'start_time' => '2018-01-05 04:05:06',
-      'end_time' => '2018-30-05 11:59:59',
+      'budget_amount' => 500,
+      'start_time' => '2018-01-05 04:05:06'
+      'end_time' => '2018-30-05 11:59:59'
     }
 
     @budget1 = Budget.new(options)
@@ -20,5 +21,8 @@ class BudgetTest < Minitest::Test
       p @budget1
       assert_equal("May 2018", @budget1.budget_name)
     end
+
+    # #  test for save
+    #   # run seeds.rb and see if seeds appear in tags table
 
 end
