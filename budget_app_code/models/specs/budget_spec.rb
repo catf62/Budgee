@@ -43,6 +43,10 @@ class BudgetTest < Minitest::Test
     @budget1.delete
   end
 
+  def test_delete_all
+    Budget.delete_all
+  end
+
 end
 
 # binding.pry
