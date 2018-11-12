@@ -51,7 +51,6 @@ class Budget
   end
 
   def update()
-    p @budget2
     sql = "UPDATE budgets
     SET budget_name = $1, budget_amount = $2, start_time = $3, end_time = $4
     WHERE id = $5"

@@ -46,4 +46,12 @@ class BudgetTransaction
     return transaction_data.map { |budget_transaction| BudgetTransaction.new(budget_transaction) }
   end
 
+  def update()
+    sql = "UPDATE budget_transactions
+    SET budget_id = $1, transaction_id = $2
+    WHERE id = $3"
+    values = [budget_id, transaction_id, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end

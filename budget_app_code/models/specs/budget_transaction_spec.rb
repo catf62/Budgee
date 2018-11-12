@@ -32,4 +32,10 @@ class BudgetTest < Minitest::Test
     assert_equal(3, BudgetTransaction.all().last.budget_id)
   end
 
+  def test_update
+    @budget_transaction1.budget_id = 4
+    @budget_transaction1.update
+    assert_equal(4, @budget_transaction1.budget_id)
+  end
+
 end
