@@ -53,14 +53,14 @@ class Transaction
     return transaction_data.map { |transaction| Transaction.new(transaction) }
   end
 
-  # def self.find_ids_less_equal(id)
-  #   sql = "SELECT * FROM transactions
-  #   WHERE id <= $1"
-  #   values = [id]
-  #   transaction_data = SqlRunner.run(sql)
-  #   transactions = map_items(transaction_data)
-  #   return transactions
-  # end
+  def self.find_ids_less_equal(id)
+    sql = "SELECT * FROM transactions
+    WHERE id <= $1"
+    values = [id]
+    transaction_data = SqlRunner.run(sql, values)
+    transactions = map_items(transaction_data)
+    return transactions
+  end
 
 
 end
