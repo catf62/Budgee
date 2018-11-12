@@ -37,9 +37,19 @@ class TransactionTest < Minitest::Test
   #   assert_equal(35, Transaction.find_ids_less_equal(@transaction4.id).last.transaction_amount)
   # end
 
-  def test_transactions_total
-    assert_equal(200, Transaction.transactions_total)
+  # def test_all_transactions_total
+  #   assert_equal(200, Transaction.all_transactions_total)
+  # end
+
+  def test_transactions_total__trans_4
+    assert_equal(200, Transaction.transactions_total_by_id(@transaction4.id))
   end
+
+  def test_transactions_total__trans_3
+      assert_equal(165, Transaction.transactions_total_by_id(3))
+    end
+
+
 
   # def test_self_all
   #   assert_equal(35, Transaction.all().last.transaction_amount)

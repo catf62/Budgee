@@ -62,8 +62,15 @@ class Transaction
     return transactions
   end
 
-  def self.transactions_total()
+  def self.all_transactions_total()
     transactions = self.all()
+    transactions_total = 0
+    transactions.each { |transaction| transactions_total += transaction.transaction_amount}
+    return transactions_total
+  end
+
+  def self.transactions_total_by_id(id)
+    transactions = self.find_ids_less_equal(id)
     transactions_total = 0
     transactions.each { |transaction| transactions_total += transaction.transaction_amount}
     return transactions_total
