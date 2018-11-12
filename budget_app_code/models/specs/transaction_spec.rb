@@ -9,10 +9,10 @@ class TransactionTest < Minitest::Test
     options = {
       'id' => 1,
       'transaction_amount' => 5.00,
-      'merchant_id' => 1,
+      'merchant_id' => 4,
       'tag_id' => 1,
       'essential' => 'Y',
-      'total_spent' => 5.00
+      'total_spend' => 5.00
     }
     @transaction1 = Transaction.new(options)
   end
@@ -25,5 +25,8 @@ class TransactionTest < Minitest::Test
   def test_transaction_has_time_added
   puts  @transaction1.time_added
   end
+
+  # #  test for save
+  #   # run seeds.rb and see if seeds appear in tags table
 
 end
