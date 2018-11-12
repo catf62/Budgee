@@ -15,9 +15,13 @@ class BudgetTest < Minitest::Test
     @budget_transaction1 = BudgetTransaction.new(options)
   end
 
-  def test_budget_transaction_has_budget_id
+  def
+  test_budget_transaction_has_budget_id
     p @budget_transaction1
     assert_equal(1, @budget_transaction1.budget_id)
   end
+
+  # #  test for save
+  #   # run seeds.rb and see if seeds appear in budget_transactions table
 
 end
