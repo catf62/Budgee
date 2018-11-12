@@ -42,6 +42,17 @@ class Transaction
     return transaction
   end
 
+  def self.all()
+    sql = "SELECT * FROM transactions"
+    transaction_data = SqlRunner.run(sql)
+    transactions = map_items(transaction_data)
+    return transactions
+  end
+
+  def self.map_items(transaction_data)
+    return transaction_data.map { |transaction| Transaction.new(transaction) }
+  end
+
   # def self.find_ids_less_equal(id)
   #   sql = "SELECT * FROM transactions
   #   WHERE id <= $1"
@@ -50,9 +61,6 @@ class Transaction
   #   transactions = map_items(transaction_data)
   #   return transactions
   # end
-  #
-  # def self.map_items(transaction_data)
-  #   return transaction_data.map { |transaction| Transaction.new(transaction) }
-  # end
+
 
 end
