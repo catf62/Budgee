@@ -34,4 +34,25 @@ class Transaction
     @id = id
   end
 
+  def self.find(id)
+    sql = "SELECT * from transactions WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql ,values).first
+    transaction = Transaction.new(result)
+    return transaction
+  end
+
+  # def self.find_ids_less_equal(id)
+  #   sql = "SELECT * FROM transactions
+  #   WHERE id <= $1"
+  #   values = [id]
+  #   transaction_data = SqlRunner.run(sql)
+  #   transactions = map_items(transaction_data)
+  #   return transactions
+  # end
+  #
+  # def self.map_items(transaction_data)
+  #   return transaction_data.map { |transaction| Transaction.new(transaction) }
+  # end
+
 end

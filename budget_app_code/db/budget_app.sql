@@ -20,7 +20,7 @@ CREATE TABLE tags
 CREATE TABLE transactions
 (
   id SERIAL8 primary key,
-  transaction_amount NUMERIC(10,2),
+  transaction_amount NUMERIC,
   merchant_id INT8 references merchants(id) ON DELETE CASCADE,
   tag_id INT8 references tags(id) ON DELETE CASCADE,
   essential VARCHAR(255),
