@@ -7,12 +7,12 @@ class Transaction
 
   def initialize (options)
     @id = options['id'].to_i if options['id']
-    @transaction_amount = options['transaction_amount']
+    @transaction_amount = options['transaction_amount'].to_f
     @merchant_id = options['merchant_id']
     @tag_id = options['tag_id']
     @essential = options['essential']
     @time_added = Time.now
-    @total_spend = options['total_spend']
+    @total_spend = options['total_spend'].to_f
   end
 
   def save()

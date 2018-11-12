@@ -8,7 +8,7 @@ class Budget
   def initialize ( options )
     @id = options['id'].to_i if options['id']
     @budget_name = options['budget_name']
-    @budget_amount = options['budget_amount']
+    @budget_amount = options['budget_amount'].to_f
     @start_time = options['start_time']
     @end_time = options['end_time']
   end
