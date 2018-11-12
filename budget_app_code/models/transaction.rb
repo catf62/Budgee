@@ -3,7 +3,7 @@ require( 'pry-byebug' )
 
 class Transaction
   attr_reader :id
-  attr_accessor :transaction_amount, :merchant_id, :tag_id, :essential, :time_added, :total_spend
+  attr_accessor :transaction_amount, :merchant_id, :tag_id, :essential, :time_added
 
   def initialize (options)
     @id = options['id'].to_i if options['id']
@@ -12,7 +12,6 @@ class Transaction
     @tag_id = options['tag_id']
     @essential = options['essential']
     @time_added = Time.now
-    @total_spend = options['total_spend'].to_f
   end
 
   def save()
@@ -22,13 +21,12 @@ class Transaction
       merchant_id,
       tag_id,
       essential,
-      time_added,
-      total_spend
+      time_added
     )
       VALUES
-      ($1, $2, $3, $4, $5, $6)
+      ($1, $2, $3, $4, $5)
       RETURNING id"
-    values = [@transaction_amount, @merchant_id, @tag_id, @essential, @time_added, @total_spend]
+    values = [@transaction_amount, @merchant_id, @tag_id, @essential, @time_added]
     result = SqlRunner.run(sql, values)
     id = result.first['id']
     @id = id
@@ -75,6 +73,26 @@ class Transaction
     transactions.each { |transaction| transactions_total += transaction.transaction_amount}
     return transactions_total
   end
+
+  def update()
+    p @budget2
+    sql = "UPDATE transactions
+    SET transaction_amount = $1, merchant_id = $2, tag_id = $3, essential = $4, time_added = $5
+    WHERE id = $6"
+    values = [transaction_amount, merchant_id, tag_id, essential, time_added, @id]
+    SqlRunner.run(sql, values)
+  end
+
+  # def delete()
+  #   sql = "DELETE FROM transactions WHERE id = $1"
+  #   values = [@id]
+  #   SqlRunner.run(sql, values)
+  # end
+  #
+  # def self.delete_all
+  #   sql = "DELETE FROM transactions;"
+  #   SqlRunner.run(sql)
+  # end
 
 
 end
