@@ -25,8 +25,7 @@ CREATE TABLE transactions
   tag_id INT8 references tags(id) ON DELETE CASCADE,
   essential VARCHAR(255),
   time_added TIMESTAMP,
-  total_spend NUMERIC(10,2),
-  remaining_budget NUMERIC(10,2)
+  total_spend NUMERIC(10,2)
 );
 
 CREATE TABLE budgets
@@ -42,7 +41,8 @@ CREATE TABLE budget_transactions
 (
   id SERIAL8 primary key,
   transaction_id INT8 references transactions(id) ON DELETE CASCADE,
-  budget_id INT8 references budgets(id) ON DELETE CASCADE
+  budget_id INT8 references budgets(id) ON DELETE CASCADE,
+  remaining_budget NUMERIC
 );
 
 -- To wipe and start again
