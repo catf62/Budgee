@@ -35,4 +35,15 @@ class BudgetTransaction
     return budget_transactions
   end
 
+  def self.all()
+    sql = "SELECT * FROM budget_transactions"
+    budget_transaction_data = SqlRunner.run(sql)
+    transactions = map_items(budget_transaction_data)
+    return transactions
+  end
+
+  def self.map_items(transaction_data)
+    return transaction_data.map { |budget_transaction| BudgetTransaction.new(budget_transaction) }
+  end
+
 end

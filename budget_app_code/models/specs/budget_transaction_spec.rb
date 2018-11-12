@@ -24,8 +24,12 @@ class BudgetTest < Minitest::Test
   # #  test for save
   #   # run seeds.rb and see if seeds appear in budget_transactions table
 
-  def test_find_by_id
-    assert_equal(4, BudgetTransaction.find(2).budget_id)
+  # def test_find_by_id
+  #   assert_equal(4, BudgetTransaction.find(2).budget_id)
+  # end
+
+  def test_self_all
+    assert_equal(3, BudgetTransaction.all().last.budget_id)
   end
 
 end
