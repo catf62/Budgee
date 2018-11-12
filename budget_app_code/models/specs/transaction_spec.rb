@@ -12,7 +12,6 @@ class TransactionTest < Minitest::Test
       'merchant_id' => 1,
       'tag_id' => 1,
       'essential' => 'Y',
-      'time_added' => '2018-11-12 14:42:06',
       'total_spent' => 5.00
     }
     @transaction1 = Transaction.new(options)
@@ -21,6 +20,10 @@ class TransactionTest < Minitest::Test
   def test_transaction_has_amount
     p @transaction1
     assert_equal(5.00, @transaction1.transaction_amount)
+  end
+
+  def test_transaction_has_time_added
+  puts  @transaction1.time_added
   end
 
 end

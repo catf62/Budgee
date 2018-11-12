@@ -11,7 +11,7 @@ class Transaction
     @merchant_id = options['marchant_id']
     @tag_id = options['tag_id']
     @essential = options['essential']
-    @time_added = options['time_added']
+    @time_added = Time.now
     @total_spent = options['total_spent']
   end
 
