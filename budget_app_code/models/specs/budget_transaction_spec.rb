@@ -28,14 +28,22 @@ class BudgetTest < Minitest::Test
   #   assert_equal(4, BudgetTransaction.find(2).budget_id)
   # end
 
-  def test_self_all
-    assert_equal(3, BudgetTransaction.all().last.budget_id)
-  end
+  # def test_self_all
+  #   assert_equal(3, BudgetTransaction.all().last.budget_id)
+  # end
+  #
+  # def test_update
+  #   @budget_transaction1.budget_id = 4
+  #   @budget_transaction1.update
+  #   assert_equal(4, @budget_transaction1.budget_id)
+  # end
+  #
+  # def test_delete
+  #   @budget_transaction1.delete
+  # end
 
-  def test_update
-    @budget_transaction1.budget_id = 4
-    @budget_transaction1.update
-    assert_equal(4, @budget_transaction1.budget_id)
-  end
+  # def test_delete_all
+  #   BudgetTransaction.delete_all
+  # end
 
 end
