@@ -1,1 +1,5 @@
 <p>Tag Name: <%=@tag.tag_name%></p>
+
+<form class="" action="/tags/<%= @tag.id %>/delete" method="post">
+  <input type="submit" value="DELETE">
+</form>

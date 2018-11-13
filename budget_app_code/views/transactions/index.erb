@@ -1,0 +1,18 @@
+<h1>My Transactions</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+  </tr>
+  <% for transaction in @transactions %>
+  <tr>
+    <td><a href="/transactions/<%= transaction.id %>"><%= transaction.transaction_amount %></a></td>
+    <td>|</td>
+  </tr>
+  <% end %>
+</table>
+<br></br>
+
+<a href="/transactions/new">New Transaction</a>
+<br></br>
