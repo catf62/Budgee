@@ -1,6 +1,6 @@
 * {
   font-family: "Josefin Sans", sans-serif;
-  color: Black;
+  color: #053E45;
 }
 
 .banner{
@@ -9,7 +9,7 @@
       width: 100%;
     }
 
-.banner h1{  
+.banner h1{
       position: relative;
       text-align: center;
       top: 25px;
