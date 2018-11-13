@@ -2,8 +2,7 @@ require_relative( '../db/sql_runner' )
 require( 'pry-byebug' )
 
 class Merchant
-  attr_reader :id
-  attr_accessor :merchant_name
+  attr_accessor :id, :merchant_name
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
@@ -58,9 +57,9 @@ class Merchant
     SqlRunner.run(sql)
   end
 
-  def delete()
+  def self.delete(id)
     sql = "DELETE FROM merchants WHERE id = $1"
-    values = [@id]
+    values = [id]
     SqlRunner.run(sql, values)
   end
 
