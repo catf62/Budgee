@@ -40,5 +40,5 @@ end
 post '/budgets/:id' do
   budget = Budget.new( params )
   budget.update
-  redirect to 'budgets/' + params[:id]
+  redirect to 'budgets'
 end
