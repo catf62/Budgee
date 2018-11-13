@@ -1,0 +1,21 @@
+* {
+  font-family: "Josefin Sans", sans-serif;
+  color: Black;
+}
+
+.banner{
+      background-color: #10D0E5;
+      height: 100px;
+      width: 100%;
+    }
+
+.banner h1{  
+      position: relative;
+      text-align: center;
+      top: 25px;
+      width: 800px;
+      height: 50px;
+      margin: 0 auto;
+      color: White;
+      font-weight: bold;
+    }
