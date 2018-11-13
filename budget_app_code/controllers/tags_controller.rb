@@ -23,8 +23,8 @@ get '/tags/:id' do # show
   erb(:"tags/show")
 end
 
-# post '/tags/:id/delete' do
-#   @tag = Tag.find( params[:id] )
-#   @tag.delete()
-#   redirect to "tags"
-# end
+post '/tags/:id/delete' do
+  @tag = Tag.find( params[:id] )
+  @tag.delete()
+  redirect to "tags"
+end

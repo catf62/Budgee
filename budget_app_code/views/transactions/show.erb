@@ -1,1 +1,6 @@
 <p>Transaction Amount: <%=@transaction.transaction_amount%></p>
+
+<p>Are you sure you want to delete this transaction?</p>
+<form class="" action="/transactions/<%= @transaction.id %>/delete" method="post">
+  <input type="submit" value="DELETE">
+</form>
