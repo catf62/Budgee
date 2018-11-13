@@ -2,13 +2,32 @@
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Transaction Amount</th>
+    <th></th>
+    <th>Merchant</th>
+    <th></th>
+    <th>Tag</th>
+    <th></th>
+    <th>Essential?</th>
+    <th></th>
+    <th>Time Added</th>
     <th></th>
   </tr>
+
   <% for transaction in @transactions %>
+
   <tr>
     <td><a href="/transactions/<%= transaction.id %>"><%= transaction.transaction_amount %></a></td>
     <td>|</td>
+    <td><a href="/transactions/<%= transaction.id %>"><%= transaction.merchant_id %></a></td>
+    <td>|</td>
+    <td><a href="/transactions/<%= transaction.id %>"><%= transaction.tag_id %></a></td>
+    <td>|</td>
+    <td><a href="/transactions/<%= transaction.id %>"><%= transaction.essential %></a></td>
+    <td>|</td>
+    <td><a href="/transactions/<%= transaction.id %>"><%= transaction.time_added %></a></td>
+    <td>|</td>
+
   </tr>
   <% end %>
 </table>
@@ -17,4 +36,4 @@
 <a href="/transactions/new">New Transaction</a>
 <br></br>
 
-<p>Click on a transaction to delete it</p>
+<p>Click on a transaction to delete or edit it</p>

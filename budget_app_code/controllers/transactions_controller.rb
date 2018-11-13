@@ -29,3 +29,17 @@ post '/transactions/:id/delete' do
   @transaction.delete()
   redirect to "transactions"
 end
+
+# EDIT
+get '/transactions/:id/edit' do
+  @essentials = ['Essential', 'Could Manage Without', 'Money Muching Nonsense!']
+  @transaction = Transaction.find(params[:id])
+  erb(:"transactions/edit")
+end
+
+# UPDATE
+post '/transactions/:id' do
+  transaction = Transaction.new( params )
+  transaction.update
+  redirect to 'transactions'
+end

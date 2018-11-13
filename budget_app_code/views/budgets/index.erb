@@ -13,14 +13,19 @@
   </tr>
 
   <% for budget in @budgets %>
+
   <tr>
     <td><a href="/budgets/<%= budget.id %>"><%= budget.budget_name %></a></td>
+
     <td>|</td>
     <td><a href="/budgets/<%= budget.id %>"><%= budget.budget_amount %></a></td>
+
     <td>|</td>
     <td><a href="/budgets/<%= budget.id %>"><%= budget.start_time %></a></td>
+
     <td>|</td>
     <td><a href="/budgets/<%= budget.id %>"><%= budget.end_time %></a></td>
+
     <td>|</td>
   </tr>
   <% end %>
