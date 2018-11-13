@@ -1,0 +1,26 @@
+<h2>Edit <%= @budget.budget_name %></h2>
+<form method="POST" action="/budgets/<%= @budget.id %>">
+  <div class="form-wrapper">
+
+    <div class="form-el">
+      <label for="budget_name">Budget Name:</label>
+      <input type="text" name="budget_name" id="budget_name" value="<%= @budget.budget_name %>"/>
+    </div>
+
+    <div class="form-el">
+      <label for="budget_amount">Budget Amount:</label>
+      <input type="number" name="budget_amount" id="budget_amount" value="<%= @budget.budget_amount%>"/>
+    </div>
+
+    <div class="form-el">
+      <label for="start_time">Start Time</label>
+      <input type="text" name="start_time" id="start_time" value="<%= @budget.start_time %>"/>
+    </div>
+
+    <div class="form-el">
+      <label for="end_time">End Time</label>
+      <input type="text" name="end_time" id="end_time" value="<%= @budget.start_time %>"/>
+    </div>
+
+  </div>
+</form>

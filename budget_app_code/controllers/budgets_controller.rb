@@ -28,3 +28,17 @@ post '/budgets/:id/delete' do
   @budget.delete()
   redirect to "budgets"
 end
+
+
+# EDIT
+get '/budgets/:id/edit' do
+  @budget = Budget.find(params[:id])
+  erb(:"budgets/edit")
+end
+
+# UPDATE
+post '/budgets/:id' do
+  budget = Budget.new( params )
+  budget.update
+  redirect to 'budgets/' + params[:id]
+end
