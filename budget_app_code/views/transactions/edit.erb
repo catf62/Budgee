@@ -33,12 +33,8 @@
       </select>
     </div>
 
-    <label for="essentail">Essential?:</label>
-    <select id= "essential" name="essential">
-      <% @essentials.each do |essential| %>
-        <option value="<%= essential %>" <%= 'selected' if @transactions.essential == essential %>><%= essential %></option>
-      <% end %>
-    </select>
+    <label for="essential">Essential?:</label>
+    <input type="checkbox" value="Y" <%= @transaction.essential == 'Y' ? 'checked' : '' %>></input>
 
 
     <div class="form-el">

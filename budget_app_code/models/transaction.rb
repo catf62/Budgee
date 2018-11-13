@@ -93,6 +93,15 @@ class Transaction
     sql = "DELETE FROM transactions;"
     SqlRunner.run(sql)
   end
-
+# 
+#   def merchant()
+#   merchant = Merchant.find(@merchant_id)
+#   return merchant
+# end
+#
+#   def merchants()
+#   merchants = Merchant.find_all()
+#   return merchants
+# end
 
 end

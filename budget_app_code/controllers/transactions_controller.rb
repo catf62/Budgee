@@ -34,6 +34,8 @@ end
 get '/transactions/:id/edit' do
   @essentials = ['Essential', 'Could Manage Without', 'Money Muching Nonsense!']
   @transaction = Transaction.find(params[:id])
+  @merchants = Merchant.all()
+  @tags = Tag.all()
   erb(:"transactions/edit")
 end
 
