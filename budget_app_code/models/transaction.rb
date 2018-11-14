@@ -13,7 +13,7 @@ class Transaction
     @merchant_id = options['merchant_id'].to_i
     @tag_id = options['tag_id'].to_i
     @essential = options['essential']
-    @time_added = Time.now
+    @time_added = options['time_added']
   end
 
   def save()

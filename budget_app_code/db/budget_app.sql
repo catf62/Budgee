@@ -24,7 +24,7 @@ CREATE TABLE transactions
   merchant_id INT8 references merchants(id) ON DELETE CASCADE,
   tag_id INT8 references tags(id) ON DELETE CASCADE,
   essential VARCHAR(255),
-  time_added TIMESTAMP
+  time_added VARCHAR(255)
 );
 
 CREATE TABLE budgets
