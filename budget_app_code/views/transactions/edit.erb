@@ -44,19 +44,17 @@
         </select>
       </div>
 
-      <!-- <label for="essential">Essential?:</label>
-      <select class="buttons">
+      <label for="essential">Essential?:</label>
+      <select class="buttons" name="essential">
         <option value="Yes">Yes</option>
         <option value="No">No</option>
-      </select> -->
+      </select>
 
 
       <div class="form-el">
-        <label for="time_added">Time Added*:</label>
-        <input type="text" name="time_added" id="time_added" value="<%= @transaction.time_added %>"/>
+        <label for="time_added">Time Added:</label>
+        <input type="date" name="time_added" id="time_added" value="<%= @transaction.time_added %>"/>
       </div>
-
-      <p><i>*Times should be entered in the format 2018-09-30 23:59:59</i><p>
 
 
       <div class="form-el">
