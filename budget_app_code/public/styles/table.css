@@ -1,0 +1,12 @@
+th, td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+tr:nth-child(odd) {background-color: #D4FBF9;}
+
+th {
+  background-color: #10D0E5;
+  color: white;
+}

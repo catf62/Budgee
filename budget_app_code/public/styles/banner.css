@@ -5,7 +5,7 @@
 }
 
 .banner{
-      background-color: #10D0E5;
+      background-color: #10D0E5;;
       height: 100px;
       width: 100%;
     }
@@ -20,3 +20,6 @@
       color: White;
       font-weight: bold;
     }
+
+    /* A2F9F3 */
+    /* #10D0E5; */
