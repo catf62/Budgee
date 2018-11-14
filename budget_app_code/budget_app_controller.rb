@@ -1,5 +1,6 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
+also_reload("models/*")
 # require_relative('controllers/budget_transactions_controller')
 require_relative('controllers/budgets_controller')
 require_relative('controllers/merchants_controller')

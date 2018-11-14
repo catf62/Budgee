@@ -36,14 +36,15 @@ class TagTest < Minitest::Test
   #   @tag1.update
   #   assert_equal("Books", @tag1.tag_name)
   # end
+  #
+  # def test_delete
+  #   @tag1.delete
+  # end
+  #
+  #
+  # def test_delete_all
+  #   Tag.delete_all
+  # end
 
-  def test_delete
-    @tag1.delete
-  end
-
-
-  def test_delete_all
-    Tag.delete_all
-  end
 
 end

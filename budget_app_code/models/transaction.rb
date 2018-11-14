@@ -1,6 +1,7 @@
 require_relative( '../db/sql_runner' )
 require( 'pry-byebug' )
 require_relative('merchant')
+require_relative('tag')
 
 class Transaction
   attr_reader :id
@@ -96,8 +97,13 @@ class Transaction
   end
 
   def merchant()
-  merchant = Merchant.find(@merchant_id)
-  return merchant
+    merchant = Merchant.find(@merchant_id)
+    return merchant
+  end
+
+  def tag()
+    tag = Tag.find(@tag_id)
+    return tag
   end
 
 

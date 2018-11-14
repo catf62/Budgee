@@ -70,6 +70,10 @@ class TransactionTest < Minitest::Test
   #   assert_equal(5,@transaction4.merchant)
   # end
 
+  def test_tag()
+    assert_equal(5,@transaction4.tag)
+  end
+
 end
 
 nil
