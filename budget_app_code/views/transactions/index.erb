@@ -1,53 +1,63 @@
 <link rel="stylesheet" type="text/css" href="/styles/banner.css">
+<link rel="stylesheet" type="text/css" href="/styles/button.css">
+<link rel="stylesheet" type="text/css" href="/styles/text.css">
+
 <div class="banner">
   <h1>My Transactions</h1>
 </div>
-
-
-<table>
-  <tr>
-    <th>Transaction Amount</th>
-    <th></th>
-    <th>Merchant</th>
-    <th></th>
-    <th>Tag</th>
-    <th></th>
-    <th>Essential?</th>
-    <th></th>
-    <th>Time Added</th>
-    <th></th>
-  </tr>
-
-  <% for transaction in @transactions %>
-
-  <tr>
-    <td><a href="/transactions/<%= transaction.id %>"><%= transaction.transaction_amount %></a></td>
-
-    <td>|</td>
-
-    <td><a href="/transactions/<%= transaction.id %>"><%= transaction.merchant_id %></a></td>
-
-    <td>|</td>
-
-    <td><a href="/transactions/<%= transaction.id %>"><%= transaction.tag_id %></a></td>
-
-    <td>|</td>
-
-    <td><a href="/transactions/<%= transaction.id %>"><%= transaction.essential %></a></td>
-
-    <td>|</td>
-
-    <td><a href="/transactions/<%= transaction.id %>"><%= transaction.time_added %></a></td>
-
-    <td>|</td>
-
-  </tr>
-  <% end %>
-
-</table>
 <br></br>
 
-<a href="/transactions/new">New Transaction</a>
+<div class="wrapper">
+  <table>
+    <tr>
+      <th>Transaction Amount</th>
+      <th></th>
+      <th>Merchant</th>
+      <th></th>
+      <th>Tag</th>
+      <th></th>
+      <th>Essential?</th>
+      <th></th>
+      <th>Time Added</th>
+      <th></th>
+    </tr>
+
+    <% for transaction in @transactions %>
+
+    <tr>
+      <td><a href="/transactions/<%= transaction.id %>"><%= transaction.transaction_amount %></a></td>
+
+      <td>|</td>
+
+      <td><a href="/transactions/<%= transaction.id %>"><%= transaction.merchant_id %></a></td>
+
+      <td>|</td>
+
+      <td><a href="/transactions/<%= transaction.id %>"><%= transaction.tag_id %></a></td>
+
+      <td>|</td>
+
+      <td><a href="/transactions/<%= transaction.id %>"><%= transaction.essential %></a></td>
+
+      <td>|</td>
+
+      <td><a href="/transactions/<%= transaction.id %>"><%= transaction.time_added %></a></td>
+
+      <td>|</td>
+
+    </tr>
+    <% end %>
+
+  </table>
+</div>
 <br></br>
 
-<p>Click on a transaction to delete or edit it</p>
+<div class="wrapper">
+  <div class="buttons">
+    <a href="/transactions/new">New Transaction</a>
+  </div>
+</div>
+
+<div class="info_text">
+<p>Click on any transaction to edit or delete the transaction </p>
+</div>

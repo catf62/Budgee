@@ -1,8 +1,21 @@
-<p>Transaction Amount: <%=@transaction.transaction_amount%></p>
+<div class="banner">
+  <h1>Transaction: £<%=@transaction.transaction_amount.to_i%></h1>
+</div>
+<br></br>
 
-<p>Are you sure you want to delete this transaction?</p>
-<form class="" action="/transactions/<%= @transaction.id %>/delete" method="post">
-  <input type="submit" value="DELETE">
-</form>
+<div class="wrapper">
 
-<a href="/transactions/<%= @transaction.id %>/edit">Edit Transaction</a>
+  <div info_text>
+    <form class="" action="/transactions/<%= @transaction.id %>/delete" method="post">
+      <input type="submit" value="Delete Transaction" class="buttons">
+    </form>
+    <br></br>
+
+    <div class="buttons">
+      <a href="/transactions/<%= @transaction.id %>/edit">Edit Transaction</a>
+    </div>
+  </div>
+
+</div>
+
+</div>

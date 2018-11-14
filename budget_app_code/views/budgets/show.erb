@@ -1,9 +1,9 @@
+<div class="banner">
+  <h1>Budget: <%=@budget.budget_name%></h1>
+</div>
+<br></br>
+
 <div class="wrapper">
-
-  <div class="name_text">
-    <p><b>Budget Name:</b> <%=@budget.budget_name%></p>
-  </div>
-
 
   <div info_text>
     <form class="" action="/budgets/<%= @budget.id %>/delete" method="post">
