@@ -57,14 +57,18 @@ class TransactionTest < Minitest::Test
   #   @transaction4.update
   #   assert_equal(101.99, @transaction4.transaction_amount)
   # end
-  # 
+  #
   # def test_delete
   #   @transaction4.delete
   # end
 
-  def test_delete_all
-    Transaction.delete_all
-  end
+  # def test_delete_all
+  #   Transaction.delete_all
+  # end
+
+  # def test_merchant()
+  #   assert_equal(5,@transaction4.merchant)
+  # end
 
 end
 
