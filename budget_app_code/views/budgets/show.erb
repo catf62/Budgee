@@ -1,8 +1,20 @@
-<p>Budget Name: <%=@budget.budget_name%></p>
+<div class="wrapper">
+
+  <div class="name_text">
+    <p><b>Budget Name:</b> <%=@budget.budget_name%></p>
+  </div>
 
 
-<form class="" action="/budgets/<%= @budget.id %>/delete" method="post">
-  <input type="submit" value="DELETE BUDGET">
-</form>
+  <div info_text>
+    <form class="" action="/budgets/<%= @budget.id %>/delete" method="post">
+      <input class="buttons"type="submit" value="Delete Budget">
+    </form>
+    <br></br>
 
-<a href="/budgets/<%= @budget.id %>/edit">Edit Budget</a>
+
+    <div class="buttons">
+      <a href="/budgets/<%= @budget.id %>/edit">Edit Budget</a>
+    </div>
+  </div>
+
+</div>

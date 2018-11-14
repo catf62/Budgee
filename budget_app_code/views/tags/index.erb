@@ -1,24 +1,35 @@
 <link rel="stylesheet" type="text/css" href="/styles/banner.css">
+<link rel="stylesheet" type="text/css" href="/styles/button.css">
+<link rel="stylesheet" type="text/css" href="/styles/text.css">
+
 <div class="banner">
   <h1>My Tags</h1>
 </div>
 <br></br>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-  </tr>
-  <% for tag in @tags %>
-  <tr>
-    <td><a href="/tags/<%= tag.id %>"><%= tag.tag_name %></a></td>
-    <td>|</td>
-  </tr>
-  <% end %>
-</table>
+<div class="wrapper">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+    <% for tag in @tags %>
+    <tr>
+      <td><a href="/tags/<%= tag.id %>"><%= tag.tag_name %></a></td>
+      <td>|</td>
+    </tr>
+    <% end %>
+  </table>
+</div>
 <br></br>
 
-<a href="/tags/new">New Tag</a>
-<br></br>
+<div class="wrapper">
+  <div class="buttons">
+    <a href="/tags/new">New Tag</a>
+  </div>
+</div>
 
-<p>Click on a tag to delete a tag</p>
+
+<div class="info_text">
+<p>Click on any tag to delete the tag</p>
+</div>

@@ -1,4 +1,17 @@
-.buttons{
-  background-color: #10D0E5;
-  color: white;
+.wrapper {
+    text-align: center;
+}
+
+.buttons {
+    text-decoration:none;
+    background-color: #10D0E5;
+    border: none;
+    color: Black;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 2px solid #F1F3F4;
 }

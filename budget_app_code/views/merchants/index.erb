@@ -1,24 +1,35 @@
 <link rel="stylesheet" type="text/css" href="/styles/banner.css">
+<link rel="stylesheet" type="text/css" href="/styles/button.css">
+<link rel="stylesheet" type="text/css" href="/styles/text.css">
+
 <div class="banner">
   <h1>My Merchants</h1>
 </div>
 <br></br>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-  </tr>
-  <% for merchant in @merchants %>
-  <tr>
-    <td><a href="/merchants/<%= merchant.id %>"><%= merchant.merchant_name %></a></td>
-    <td>|</td>
-  </tr>
-  <% end %>
-</table>
+<div class="wrapper">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+    <% for merchant in @merchants %>
+    <tr>
+      <td><a href="/merchants/<%= merchant.id %>"><%= merchant.merchant_name %></a></td>
+      <td>|</td>
+    </tr>
+    <% end %>
+  </table>
+</div>
 <br></br>
 
-<a href="/merchants/new">New Merchant</a>
-<br></br>
+<div class="wrapper">
+  <div class="buttons">
+    <a href="/merchants/new">New Merchant</a>
+  </div>
+</div>
 
-<p>Click on a mechant to delete a merchant</p>
+
+<div class="info_text">
+  <p>Click on any mechant to delete the merchant</p>
+</div>

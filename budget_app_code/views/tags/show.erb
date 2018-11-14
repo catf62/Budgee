@@ -1,6 +1,15 @@
-<p>Tag Name: <%=@tag.tag_name%></p>
+<div class="wrapper">
 
-<p>Are you sure you want to delete this tag?</p>
-<form class="" action="/tags/<%= @tag.id %>/delete" method="post">
-  <input type="submit" value="DELETE">
-</form>
+  <div class="name_text">
+    <p><b>Tag Name:</b> <%= @tag.tag_name %></p>
+  </div>
+
+  <div class="warning_text">
+  <p>Are you sure you want to delete this tag?</p>
+  </div>
+
+    <form class="" action="/tags/<%= @tag.id %>/delete" method="post">
+        <input class="buttons" type="submit" value="Delete">
+    </form>
+
+</div>

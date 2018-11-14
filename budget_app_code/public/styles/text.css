@@ -1,0 +1,26 @@
+* {
+  font-family: "Josefin Sans", sans-serif;
+  color: #053E45;
+}
+
+.info_text {
+  position: relative;
+  text-align: center;
+  top: 25px;
+  width: 800px;
+  height: 50px;
+  margin: 0 auto;
+  color: Black;
+  font-weight: bold;
+}
+
+.name_text {
+  font-family: "Josefin Sans", sans-serif;
+  color: #053E45;
+}
+
+.warning_text {
+  font-family: "Josefin Sans", sans-serif;
+  color: #053E45;
+  font-weight: bold;
+}

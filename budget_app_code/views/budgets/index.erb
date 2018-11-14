@@ -1,20 +1,25 @@
 <link rel="stylesheet" type="text/css" href="/styles/banner.css">
+<link rel="stylesheet" type="text/css" href="/styles/button.css">
+<link rel="stylesheet" type="text/css" href="/styles/text.css">
+
 <div class="banner">
   <h1>My Budgets</h1>
 </div>
 <br></br>
 
-<table>
-  <tr>
-    <th>Budget Name</th>
-    <th></th>
-    <th>Budget Amount</th>
-    <th></th>
-    <th>Start Time</th>
-    <th></th>
-    <th>End Time</th>
-    <th></th>
-  </tr>
+<div class="wrapper">
+  <table>
+    <tr>
+      <th>Budget Name</th>
+      <th></th>
+      <th>Budget Amount</th>
+      <th></th>
+      <th>Start Time</th>
+      <th></th>
+      <th>End Time</th>
+      <th></th>
+    </tr>
+
 
   <% for budget in @budgets %>
 
@@ -38,9 +43,16 @@
   <% end %>
 
 </table>
+</div>
 <br></br>
 
-<a href="/budgets/new">New Budget</a>
-<br></br>
+<div class="wrapper">
+  <div class="buttons">
+    <a href="/budgets/new">New Budget</a>
+  </div>
+</div>
 
-<p>Click on a budget to delete or edit it</p>
+
+<div class="info_text">
+  <p>Click on any budget to delete or edit the budget</p>
+</div>

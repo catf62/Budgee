@@ -1,29 +1,41 @@
-<h2>Edit <%= @budget.budget_name %></h2>
-<form method="POST" action="/budgets/<%= @budget.id %>">
-  <div class="form-wrapper">
+<link rel="stylesheet" type="text/css" href="/styles/banner.css">
+<link rel="stylesheet" type="text/css" href="/styles/button.css">
+<link rel="stylesheet" type="text/css" href="/styles/text.css">
 
-    <div class="form-el">
-      <label for="budget_name">Budget Name:</label>
-      <input type="text" name="budget_name" id="budget_name" value="<%= @budget.budget_name %>"/>
-    </div>
+<div class="banner">
+  <h1>Edit Budget: <%= @budget.budget_name %></h1>
+</div>
+<br></br>
 
-    <div class="form-el">
-      <label for="budget_amount">Budget Amount:</label>
-      <input type="number" name="budget_amount" id="budget_amount" value="<%= @budget.budget_amount%>"/>
-    </div>
+<div class="wrapper">
 
-    <div class="form-el">
-      <label for="start_time">Start Time</label>
-      <input type="text" name="start_time" id="start_time" value="<%= @budget.start_time %>"/>
-    </div>
+  <form method="POST" action="/budgets/<%= @budget.id %>">
+    <div class="form-wrapper">
 
-    <div class="form-el">
-      <label for="end_time">End Time</label>
-      <input type="text" name="end_time" id="end_time" value="<%= @budget.start_time %>"/>
-    </div>
+      <div class="form-el">
+        <label for="budget_name">Budget Name:</label>
+        <input type="text" name="budget_name" id="budget_name" value="<%= @budget.budget_name %>"/>
+      </div>
 
-    <div class="form-el">
-      <input type="submit" value="UPDATE BUDGET">
+      <div class="form-el">
+        <label for="budget_amount">Budget Amount:</label>
+        <input type="number" name="budget_amount" id="budget_amount" value="<%= @budget.budget_amount%>"/>
+      </div>
 
-  </div>
-</form>
+      <div class="form-el">
+        <label for="start_time">Budget Start Time*</label>
+        <input type="text" name="start_time" id="start_time" value="<%= @budget.start_time %>"/>
+      </div>
+
+      <div class="form-el">
+        <label for="end_time">Budget End Time*</label>
+        <input type="text" name="end_time" id="end_time" value="<%= @budget.start_time %>"/>
+      </div>
+
+      <p><i>*Times should be entered in the format 2018-09-30 23:59:59</i><p>
+
+
+      <input type="submit" value="Update Budget" class="buttons">
+
+  </form>
+</div>

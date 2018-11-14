@@ -4,10 +4,11 @@
   <title>Budgee</title>
   <link href="https://fonts.googleapis.com/css?family=Merriweather|Special+Elite" rel="stylesheet">
 
-  <link rel="icon" href="/images/teal_budgie_left.png" />
+  <link rel="icon" href="/images/budgie_headshot_wee.png" />
 
   <link rel="stylesheet" type="text/css" href="/styles/banner.css">
   <link rel="stylesheet" type="text/css" href="/styles/button.css">
+  <link rel="stylesheet" type="text/css" href="/styles/text.css">
 </head>
 
 
@@ -15,23 +16,30 @@
 <main class="flex flex--row">
 
   <nav>
-    <button class="buttons" type="button">
-            <a href="/merchants">My Merchants</a>
-    </button>
-    <button class="buttons" type="button">
-            <a href="/tags">My Tags</a>
-    </button>
-    <button class="buttons" type="button">
-            <a href="/transactions">My Transactions</a>
-    </button>
-    <button class="buttons" type="button">
-            <a href="/budgets">My Budgets</a>
-    </button>
-    <button class="buttons" type="button">
-            <a href="/budget_transactions">My Budget_Transactions</a>
-    </button>
+    <div class="info_text">
+      <button class="buttons" type="button">
+              <a href="/">Home</a>
+      </button>
+      <button class="buttons" type="button">
+              <a href="/merchants">My Merchants</a>
+      </button>
+      <button class="buttons" type="button">
+              <a href="/tags">My Tags</a>
+      </button>
+      <button class="buttons" type="button">
+              <a href="/transactions">My Transactions</a>
+      </button>
+      <button class="buttons" type="button">
+              <a href="/budgets">My Budgets</a>
+      </button>
+      <!-- <button class="buttons" type="button">
+              <a href="/budget_transactions">My Budget_Transactions</a>
+      </button> -->
+    </div>
   </nav>
   <br></br>
+
+
 
   <section id="content">
   <%= yield %>
