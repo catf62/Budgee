@@ -23,16 +23,15 @@
       </div>
 
       <div class="form-el">
-        <label for="start_time">Budget Start Time*</label>
-        <input type="text" name="start_time" id="start_time" value="<%= @budget.start_time %>"/>
+        <label for="start_time">Budget Start Time</label>
+        <input type="date" name="start_time" id="start_time" value="<%= @budget.start_time %>"/>
       </div>
 
       <div class="form-el">
-        <label for="end_time">Budget End Time*</label>
-        <input type="text" name="end_time" id="end_time" value="<%= @budget.start_time %>"/>
+        <label for="end_time">Budget End Time</label>
+        <input type="date" name="end_time" id="end_time" value="<%= @budget.start_time %>"/>
       </div>
 
-      <p><i>*Times should be entered in the format 2018-09-30 23:59:59</i><p>
 
 
       <input type="submit" value="Update Budget" class="buttons">

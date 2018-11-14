@@ -19,20 +19,21 @@
 
       <div class="form-el">
         <label for="merchant_id_select">Select Merchant Id:</label>
-        <select class="buttons" name="merchant_id" id="merchant_id_select" selected="<%= @transaction.merchant_id  %>">
-          <% @merchants.each do |merchant| %>
-            <% if merchant.id == @transaction.merchant_id %>
-              <option value=<%= merchant.id %> selected><%= merchant.merchant_name.capitalize %></option>
-            <% else %>
-              <option value=<%= merchant.id %>><%= merchant.merchant_name.capitalize %></option>
+          <select class="buttons" name="merchant_id" id="merchant_id_select" selected="<%= @transaction.merchant_id  %>">
+            <% @merchants.each do |merchant| %>
+              <% if merchant.id == @transaction.merchant_id %>
+                <option value=<%= merchant.id %> selected><%= merchant.merchant_name.capitalize %></option>
+              <% else %>
+                <option value=<%= merchant.id %>><%= merchant.merchant_name.capitalize %></option>
+              <% end %>
             <% end %>
-          <% end %>
-        </select>
+            </select>
       </div>
 
       <div class="form-el">
         <label for="tag_id_select">Select Tag Id:</label>
         <select class="buttons" name="tag_id" id="tag_id_select" selected="<%= @transaction.tag_id  %>">
+
           <% @tags.each do |tag| %>
             <% if tag.id == @transaction.tag_id %>
               <option value=<%= tag.id %> selected><%= tag.tag_name.capitalize %></option>

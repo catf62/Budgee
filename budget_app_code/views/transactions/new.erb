@@ -10,19 +10,28 @@
 <div class="wrapper">
   <form method="post" action="/transactions">
 
-    <label for="transaction_name">New Transaction Amount:</label>
+    <label for="transaction_name">New Transaction Amount (£):</label>
       <input id="transaction-amount" type="text" name="transaction_amount" />
     <br></br>
 
-    <label for="merchant_id">New Transaction Merchant Id:</label>
-      <input id="merchant_id" type="text" name="merchant_id" />
+    <label for="merchant_id">New Transaction Merchant Name:</label>
+    <select class="buttons" name="merchant_id">
+      <% for merchant in @merchants %>
+        <option value="<%= merchant.id %>"><%= merchant.merchant_name %></option>
+      <% end %>
+    </select>
+
     <br></br>
 
-    <label for="tag_id">New Transaction Tag Id:</label>
-      <input id="tag_id" type="text" name="tag_id" />
+    <label for="tag_id">New Transaction Tag Name:</label>
+      <select class="buttons" name="tag_id">
+        <% for tag in @tags %>
+          <option value="<%= tag.id %>"><%= tag.tag_name %></option>
+        <% end %>
+      </select>
     <br></br>
 
-    <label for="tag_id">New Transaction Essential? :</label>
+    <label for="essential">New Transaction Essential? :</label>
     <select class="buttons">
       <option value="Yes">Yes</option>
       <option value="No">No</option>
@@ -31,9 +40,10 @@
       <!-- <input id="essential" type="select" name="essential" /> -->
     <br></br>
 
+    <label for="time_added">Time of Transaction :</label>
     <input type="date" name="" value="">
-    <<input type="hidden" name="" value="">
-
+    <!-- <input type="hidden" name="" value=""> -->
+    <br></br>
     <input type='submit' value="Add New Transaction" class="buttons"/>
   </form>
 </div>
