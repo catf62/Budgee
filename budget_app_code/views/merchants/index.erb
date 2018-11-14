@@ -1,6 +1,7 @@
 <link rel="stylesheet" type="text/css" href="/styles/banner.css">
 <link rel="stylesheet" type="text/css" href="/styles/button.css">
 <link rel="stylesheet" type="text/css" href="/styles/text.css">
+<link rel="stylesheet" type="text/css" href="/styles/table.css">
 
 <div class="banner">
   <h1>My Merchants</h1>
@@ -8,15 +9,13 @@
 <br></br>
 
 <div class="wrapper">
-  <table>
+  <table class="table" align="center">
     <tr>
       <th>Name</th>
-      <th></th>
     </tr>
     <% for merchant in @merchants %>
     <tr>
       <td><a href="/merchants/<%= merchant.id %>"><%= merchant.merchant_name %></a></td>
-      <td>|</td>
     </tr>
     <% end %>
   </table>

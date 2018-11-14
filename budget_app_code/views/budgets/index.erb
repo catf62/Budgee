@@ -1,6 +1,7 @@
 <link rel="stylesheet" type="text/css" href="/styles/banner.css">
 <link rel="stylesheet" type="text/css" href="/styles/button.css">
 <link rel="stylesheet" type="text/css" href="/styles/text.css">
+<link rel="stylesheet" type="text/css" href="/styles/table.css">
 
 <div class="banner">
   <h1>My Budgets</h1>
@@ -8,16 +9,12 @@
 <br></br>
 
 <div class="wrapper">
-  <table>
+  <table class="table" align="center">
     <tr>
       <th>Budget Name</th>
-      <th></th>
       <th>Budget Amount</th>
-      <th></th>
       <th>Start Time</th>
-      <th></th>
       <th>End Time</th>
-      <th></th>
     </tr>
 
 
@@ -26,19 +23,15 @@
   <tr>
     <td><a href="/budgets/<%= budget.id %>"><%= budget.budget_name %></a></td>
 
-    <td>|</td>
 
     <td><a href="/budgets/<%= budget.id %>"><%= budget.budget_amount %></a></td>
 
-    <td>|</td>
 
     <td><a href="/budgets/<%= budget.id %>"><%= budget.start_time %></a></td>
 
-    <td>|</td>
 
     <td><a href="/budgets/<%= budget.id %>"><%= budget.end_time %></a></td>
 
-    <td>|</td>
   </tr>
   <% end %>
 
